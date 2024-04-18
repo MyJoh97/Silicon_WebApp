@@ -31,6 +31,13 @@ public class AccountController(UserManager<UserEntity> userManager, ApplicationC
                 Email = user.Email!,
                 PhoneNumber = user.PhoneNumber,
                 Bio = user.Bio,
+            },
+            Address = new AccountAddressInfo
+            {
+                AddressLine_1 = user.Address?.AddressLine_1!,
+                AddressLine_2 = user.Address?.AddressLine_2!,
+                PostalCode = user.Address?.PostalCode!,
+                City = user.Address?.City!
             }
         };
 

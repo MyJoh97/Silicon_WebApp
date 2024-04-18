@@ -36,11 +36,15 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
 
                 if ((await _userManager.CreateAsync(userEntity, model.Password)).Succeeded)
                 {
-
+                    if ((await _signInManager.PasswordSignInAsync(model.Email, model.Password, false, false)).Succeeded)
+                        return LocalRedirect("/");
                 }
             }
-
-            ViewData["StatusMessage"] = "User with the same email already exists";
+            else
+            {
+                ViewData["StatusMessage"] = "User with the same email already exists";
+            }
+            
         }
 
 

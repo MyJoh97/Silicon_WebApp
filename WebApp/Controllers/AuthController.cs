@@ -22,8 +22,9 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
     }
 
 
-    public IActionResult SignIn()
+    public IActionResult SignIn(string returnUrl)
     {
+        ViewData["ReturnUrl"] = returnUrl ?? "/";
         return View();
     }
 
@@ -32,10 +33,11 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
     {
         if (ModelState.IsValid)
         {
-            
+            if((await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.IsPersistent, false)).Succeeded)
+                return LocalRedirect(returnUrl);
         }
 
-        ViewData[]
+        ViewData["ReturnUrl"] = returnUrl;
         ViewData["StatusMessage"] = "Incorrect email or password";
         return View(model);
     }

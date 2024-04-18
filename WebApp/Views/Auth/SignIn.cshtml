@@ -28,8 +28,13 @@
                     <input asp-for="Password" />
                 </div>
                 <div id="form-checkbox" class="checkbox-group">
-                    <input asp-for="IsPersistent" />
-                    <label asp-for="IsPersistent"></label>
+                    <div class="input-group">
+                        <input asp-for="IsPersistent" />
+                        <label asp-for="IsPersistent"></label>
+                    </div>
+                </div>
+                <div id="form-button">
+                    <button type="submit" class="btn btn-theme"><i class="fa-regular fa-arrow-left-to-bracket"></i>Sign in</button>
                 </div>
             </div>
         </form>

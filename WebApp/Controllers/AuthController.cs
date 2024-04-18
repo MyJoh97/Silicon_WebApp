@@ -13,12 +13,15 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
     private readonly SignInManager<UserEntity> _signInManager = signInManager;
     private readonly ApplicationContext _context = context;
 
+
+    [Route("/signup")]
     public IActionResult SignUp()
     {
         return View();
     }
 
     [HttpPost]
+    [Route("/signup")]
     public async Task<IActionResult> SignUp(SignUpViewModel model)
     {
         if (ModelState.IsValid)
@@ -58,7 +61,7 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
         return View(model);
     }
 
-
+    [Route("/signin")]
     public IActionResult SignIn(string returnUrl)
     {
         ViewData["ReturnUrl"] = returnUrl ?? "/";
@@ -66,6 +69,7 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
     }
 
     [HttpPost]
+    [Route("/signin")]
     public async Task<IActionResult> SignIn(SignInViewModel model, string returnUrl)
     {
         if (ModelState.IsValid)
@@ -79,7 +83,7 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
         return View(model);
     }
 
-
+    [Route("/signout")]
     public new async Task<IActionResult> SignOut()
     {
         await _signInManager.SignOutAsync();

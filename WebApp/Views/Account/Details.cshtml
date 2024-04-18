@@ -2,3 +2,20 @@
 @{
     ViewData["Title"] = "Account Details";
 }
+
+
+<section class="account-details">
+    <div class="container">
+        @if (!string.IsNullOrEmpty(TempData["StatusMessage"]?.ToString()))
+        {
+            <div class="alert alert-danger">
+                @ViewData["StatusMessage"]
+            </div>
+        }
+
+        <form method="post" asp-action="UpdateBasicInfo" asp-controller="Account">
+
+        </form>
+
+    </div>
+</section>

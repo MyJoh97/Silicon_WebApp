@@ -9,12 +9,38 @@
         @if (!string.IsNullOrEmpty(TempData["StatusMessage"]?.ToString()))
         {
             <div class="alert alert-danger">
-                @ViewData["StatusMessage"]
+                @TempData["StatusMessage"]
             </div>
         }
 
         <form method="post" asp-action="UpdateBasicInfo" asp-controller="Account">
-
+            <h5>Basic Info</h5>
+            
+            <div class="form-content">
+                <div id="form-firstname" class="input-group">
+                    <label asp-for="Basic!.FirstName"></label>
+                    <input asp-for="Basic!.FirstName" />
+                    <span asp-validation-for="Basic!.FirstName"></span>
+                </div>
+                <div id="form-lastname" class="input-group">
+                    <label asp-for="Basic!.LastName"></label>
+                    <input asp-for="Basic!.LastName" />
+                    <span asp-validation-for="Basic!.LastName"></span>
+                </div>
+                <div id="form-email" class="input-group">
+                    <label asp-for="Basic!.Email"></label>
+                    <input asp-for="Basic!.Email" />
+                    <span asp-validation-for="Basic!.Email"></span>
+                </div>
+                <div id="form-phone" class="input-group">
+                    <label asp-for="Basic!.PhoneNumber"></label>
+                    <input asp-for="Basic!.PhoneNumber" />
+                </div>
+                <div id="form-bio" class="input-group">
+                    <label asp-for="Basic!.Bio"></label>
+                    <input asp-for="Basic!.Bio" />
+                </div>
+            </div>
         </form>
 
     </div>

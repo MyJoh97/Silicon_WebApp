@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Net;
 using System.Security.Claims;
 using WebApp.ViewModels;
 
@@ -66,19 +67,32 @@ public class AccountController(UserManager<UserEntity> userManager, ApplicationC
             var user = await _context.Users.Include(i => i.Address).FirstOrDefaultAsync(x => x.Id == nameIdentifier);
             if (user != null)
             {
-                user.FirstName = user.FirstName;
-                user.LastName = user.LastName;
-                user.Email = user.Email;
-                user.PhoneNumber = user.PhoneNumber;
-                user.UserName = user.Email;
-                user.Bio = user.Bio;
-
-                var result = await _userManager.UpdateAsync(user);
-                if (result.Succeeded)
+                try
                 {
+                    if (user.Address != null)
+                    {
+                        user.Address.AddressLine_1 = model.Address!.AddressLine_1;
+                        user.Address.AddressLine_2 = model.Address!.AddressLine_2;
+                        user.Address.PostalCode = model.Address!.PostalCode;
+                        user.Address.City = model.Address!.City;
+                    }
+                    else
+                    {
+                        user.Address = new AddressEntity
+                        {
+                            AddressLine_1 = model.Address!.AddressLine_1,
+                            AddressLine_2 = model.Address!.AddressLine_2,
+                            PostalCode = model.Address!.PostalCode,
+                            City = model.Address!.City,
+                        };
+                    }
+
+                    _context.Update(user);
+                    await _context.SaveChangesAsync();
+
                     TempData["StatusMessage"] = "Updated address information successfully.";
                 }
-                else
+                catch
                 {
                     TempData["StatusMessage"] = "Unable to save address information.";
                 }

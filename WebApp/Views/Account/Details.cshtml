@@ -14,8 +14,7 @@
         }
 
         <form method="post" asp-action="UpdateBasicInfo" asp-controller="Account">
-            <h5>Basic Info</h5>
-            
+            <h5>Basic Info</h5>          
             <div class="form-content">
                 <div id="form-firstname" class="input-group">
                     <label asp-for="Basic!.FirstName"></label>
@@ -38,10 +37,13 @@
                 </div>
                 <div id="form-bio" class="input-group">
                     <label asp-for="Basic!.Bio"></label>
-                    <input asp-for="Basic!.Bio" />
+                    <textarea asp-for="Basic!.Bio"></textarea>
+                </div>
+                <div id="form-button">
+                    <button type="reset" class="btn btn-gray">Cancel</button>
+                    <button type="submit" class="btn btn-theme">Save changes</button>
                 </div>
             </div>
         </form>
-
     </div>
 </section>

@@ -7,6 +7,8 @@ namespace WebApp.Controllers;
 
 public class CoursesController : Controller
 {
+    private readonly HttpClient _httpClient;
+
     public IActionResult Index()
     {
         return View();

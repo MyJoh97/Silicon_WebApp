@@ -128,4 +128,11 @@ public class AccountController(UserManager<UserEntity> userManager, ApplicationC
 
         return RedirectToAction("Details", "Account");
     }
+
+
+    [HttpPost]
+    public async Task<IActionResult> UploadProfileImage(IFormFile file)
+    {
+        return RedirectToAction("Details", "Account");
+    }
 }

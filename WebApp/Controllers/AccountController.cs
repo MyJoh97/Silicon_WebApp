@@ -17,18 +17,12 @@ public class AccountController(UserManager<UserEntity> userManager, ApplicationC
     private readonly UserManager<UserEntity> _userManager = userManager;
     private readonly ApplicationContext _context = context;
 
-    public async Task<IActionResult> Details(AccountDetailsViewModel viewModel)
+    public async Task<IActionResult> Details()
     {
         var nameIdentifier = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
         var user = await _context.Users.Include(i => i.Address).FirstOrDefaultAsync(x => x.Id == nameIdentifier);
 
-        if (viewModel == null)
-        {
-
-        }
-
-
-        viewModel = new AccountDetailsViewModel
+        var viewModel = new AccountDetailsViewModel
         {
             Basic = new AccountBasicInfo
             {

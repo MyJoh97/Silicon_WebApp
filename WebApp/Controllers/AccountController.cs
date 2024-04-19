@@ -142,6 +142,9 @@ public class AccountController(UserManager<UserEntity> userManager, ApplicationC
 
             using var fs = new FileStream(filePath, FileMode.Create);
             await file.CopyToAsync(fs);
+
+            user.ProfileImage = fileName;
+            await _userManager.UpdateAsync(user);
         }
         else
         {

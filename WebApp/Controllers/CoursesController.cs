@@ -13,16 +13,19 @@ public class CoursesController(HttpClient httpClient) : Controller
 
     public async Task<IActionResult> Index()
     {
-
+        var viewModel = new CourseIndexViewModel();
 
 
         var response = await _httpClient.GetAsync("https://localhost:7116/api/courses");
         if (response.IsSuccessStatusCode)
         {
             var courses = JsonConvert.DeserializeObject<IEnumerable<CourseViewModel>>(await response.Content.ReadAsStringAsync());
+            if (courses != null && courses.Any())
+                viewModel.Courses = courses;
+            return View(courses);
         }
 
-        
-        return View();
+
+        return View(viewModel);
     }
 }

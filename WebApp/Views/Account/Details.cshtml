@@ -13,7 +13,7 @@
             </div>
         }
 
-        <form method="post" asp-action="UpdateBasicInfo" asp-controller="Account">
+        <form class="form-basic" method="post" asp-action="UpdateBasicInfo" asp-controller="Account">
             <h5>Basic Info</h5>          
             <div class="form-content">
                 <div id="form-firstname" class="input-group">
@@ -39,7 +39,36 @@
                     <label asp-for="Basic!.Bio"></label>
                     <textarea asp-for="Basic!.Bio"></textarea>
                 </div>
-                <div id="form-button">
+                <div class="form-button">
+                    <button type="reset" class="btn btn-gray">Cancel</button>
+                    <button type="submit" class="btn btn-theme">Save changes</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="form-address" method="post" asp-action="UpdateAddressInfo" asp-controller="Account">
+            <h5>Address Info</h5>
+            <div class="form-content">
+                <div id="form-addressline-1" class="input-group">
+                    <label asp-for="Address!.AddressLine_1!"></label>
+                    <input asp-for="Address!.AddressLine_1!" />
+                    <span asp-validation-for="Address!.AddressLine_1!"></span>
+                </div>
+                <div id="form-addressline-2" class="input-group">
+                    <label asp-for="Address!.AddressLine_2!"></label>
+                    <input asp-for="Address!.AddressLine_2!" />
+                    <span asp-validation-for="Address!.AddressLine_2!"></span>
+                </div>
+                <div id="form-postalcode" class="input-group">
+                    <label asp-for="Address!.PostalCode!"></label>
+                    <input asp-for="Address!.PostalCode!" />
+                    <span asp-validation-for="Address!.PostalCode!"></span>
+                </div>
+                <div id="form-city" class="input-group">
+                    <label asp-for="Address!.City!"></label>
+                    <input asp-for="Address!.City!" />
+                </div>
+                <div class="form-button">
                     <button type="reset" class="btn btn-gray">Cancel</button>
                     <button type="submit" class="btn btn-theme">Save changes</button>
                 </div>

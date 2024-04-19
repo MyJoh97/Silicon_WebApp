@@ -17,12 +17,18 @@ public class AccountController(UserManager<UserEntity> userManager, ApplicationC
     private readonly UserManager<UserEntity> _userManager = userManager;
     private readonly ApplicationContext _context = context;
 
-    public async Task<IActionResult> Details()
+    public async Task<IActionResult> Details(AccountDetailsViewModel viewModel)
     {
         var nameIdentifier = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
         var user = await _context.Users.Include(i => i.Address).FirstOrDefaultAsync(x => x.Id == nameIdentifier);
 
-        var viewModel = new AccountDetailsViewModel
+        if (viewModel == null)
+        {
+
+        }
+
+
+        viewModel = new AccountDetailsViewModel
         {
             Basic = new AccountBasicInfo
             {
@@ -53,12 +59,12 @@ public class AccountController(UserManager<UserEntity> userManager, ApplicationC
             var user = await _userManager.GetUserAsync(User);
             if (user != null)
             {
-                user.FirstName = user.FirstName;
-                user.LastName = user.LastName;
-                user.Email = user.Email;
-                user.PhoneNumber = user.PhoneNumber;
-                user.UserName = user.Email;
-                user.Bio = user.Bio;
+                user.FirstName = model.Basic!.FirstName;
+                user.LastName = model.Basic!.LastName;
+                user.Email = model.Basic!.Email;
+                user.PhoneNumber = model.Basic!.PhoneNumber;
+                user.UserName = model.Basic!.Email;
+                user.Bio = model.Basic!.Bio;
 
                 var result = await _userManager.UpdateAsync(user);
                 if (result.Succeeded)

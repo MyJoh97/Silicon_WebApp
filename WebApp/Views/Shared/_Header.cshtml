@@ -1,0 +1,33 @@
+﻿<header>
+    <div class="container">
+        <div class="silicon-logo">
+            <a asp-action="Home" asp-controller="Default">
+                <img src="images/logos/sillicons-logo.svg" alt="Sillicon">
+            </a>
+            <nav class="nav-bar">
+                <a asp-action="Home" asp-controller="Default" asp-fragment="showcase">Overview</a>
+                <a asp-action="Home" asp-controller="Default" asp-fragment="showcase">Features</a>
+                @if(SignInManager.IsSignedIn(User)) 
+                {
+                    <a asp-action="Index" asp-controller="Courses">Courses</a>
+                }
+                <a href="Contact.html">Contact</a>
+                <i class="fa-solid fa-bars-staggered"></i>
+            </nav>
+        </div>
+        <div class="right-side">
+            <div class="toggle-box">
+                <p>Light</p>
+                <i class="fa-sharp fa-light fa-brightness"></i>
+                <input type="checkbox" id="check">
+                <label for="check" class="button">
+                </label>
+                <p>Dark</p>
+                <i class="fa-regular fa-moon"></i>
+            </div>
+            <div class="logged-in-icon">
+                <img src="img/logged-in-icon.png" alt="Image of a profile account">
+            </div>
+        </div>
+    </div>
+</header>

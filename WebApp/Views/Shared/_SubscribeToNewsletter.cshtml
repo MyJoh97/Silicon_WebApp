@@ -57,7 +57,14 @@
                 </div>
                 <button type="submit" class="btn btn-theme">Subscribe *</button>
             </div>
-            @TempData["StatusMessage"]
+            @if (!string.IsNullOrEmpty(TempData["StatusMessage"]?.ToString())) 
+            {
+                <span>@TempData["StatusMessage"]</span>
+            }
+            else 
+            {
+                <span>* Yes, I agree to the terms and privacy policy.</span>
+            }
         </form>
     </div>
 </section>

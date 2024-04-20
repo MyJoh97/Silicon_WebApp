@@ -21,6 +21,19 @@ public class DefaultController(HttpClient httpClient) : Controller
         if (ModelState.IsValid)
         {
             var content = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json");
+            var respons = await _httpClient.PostAsync("https://localhost:7116/api/subscribe", content);
+            if (respons.IsSuccessStatusCode)
+            {
+                TempData["StatusMessage"] = "You are now subscribed";
+            }
+            else if (respons.StatusCode == System.Net.HttpStatusCode.Conflict)
+            {
+                TempData["StatusMessage"] = "You are already subscribed";
+            }
+        }
+        else
+        {
+            TempData["StatusMessage"] = "Invalid email address";
         }
 
         return RedirectToAction("Home", "Default", "subscribe");

@@ -3,7 +3,6 @@
     margin-top: 5rem;
     padding-bottom: 8rem;
 
-
     .container {
         display: flex;
         flex-direction: column;
@@ -11,16 +10,15 @@
         .newsletter-headline {
             display: flex;
             justify-content: center;
-            margin-right: 8rem;
+            margin-right: 12rem;
             margin-top: 5rem;
-
 
             h1 {
                 font-size: 40px;
                 font-family: "Manrope", sans-serif;
                 font-weight: 900;
                 color: #0B0F19;
-                margin-right: 2rem;
+                margin-right: 3rem;
             }
 
             img {
@@ -40,6 +38,7 @@
                 font-weight: 900;
                 color: #0B0F19;
                 font-size: 20px;
+                margin-left: 4rem;
             }
 
             .boxes {
@@ -47,22 +46,21 @@
                 grid-template-columns: auto auto auto;
                 column-gap: 5rem;
 
-                .check-box {
-                    display: flex;
-                    gap: 15px;
+                .checkbox-group {
+                    .check-box {
+                        display: flex;
+                        gap: 15px;
 
-                    input {
+                        input {
+                        }
+
+                        p {
+                            color: #565973;
+                            font-weight: 700;
+                            font-size: 14px;
+                            font-family: "Manrope", sans-serif;
+                        }
                     }
-
-                    p {
-                        color: #565973;
-                        font-weight: 700;
-                        font-size: 14px;
-                        font-family: "Manrope", sans-serif;
-                    }
-                }
-
-                .box-two {
                 }
             }
         }
@@ -97,7 +95,6 @@
                     }
                 }
 
-
                 button {
                     background-color: #6366F1;
                     border-radius: 8px;
@@ -115,18 +112,20 @@
                 }
             }
 
-            .terms {
+            .status-message {
                 display: flex;
-                justify-content: center;
-                margin-right: 31rem;
+                margin-left: 33rem;
                 margin-top: 1rem;
-                color: #9397AD;
-                font-weight: 600;
-                font-size: 14px;
-                font-family: "Manrope", sans-serif;
+                text-align: center;
+
+
+                p {
+                    font-weight: 600;
+                    font-size: 14px;
+                    font-family: "Manrope", sans-serif;
+                }
 
                 span {
-                    margin: 0px 4px;
                     color: #6366F1;
                     font-weight: 600;
                     font-size: 14px;

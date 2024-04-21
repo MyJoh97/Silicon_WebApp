@@ -296,7 +296,7 @@ header .container .right-side .profile-image img {
 .newsletter .container .newsletter-headline {
   display: flex;
   justify-content: center;
-  margin-right: 8rem;
+  margin-right: 12rem;
   margin-top: 5rem;
 }
 .newsletter .container .newsletter-headline h1 {
@@ -304,7 +304,7 @@ header .container .right-side .profile-image img {
   font-family: "Manrope", sans-serif;
   font-weight: 900;
   color: #0B0F19;
-  margin-right: 2rem;
+  margin-right: 3rem;
 }
 .newsletter .container .newsletter-headline img {
   margin-top: 5px;
@@ -321,17 +321,18 @@ header .container .right-side .profile-image img {
   font-weight: 900;
   color: #0B0F19;
   font-size: 20px;
+  margin-left: 4rem;
 }
 .newsletter .container .newsletter-choices .boxes {
   display: grid;
   grid-template-columns: auto auto auto;
   column-gap: 5rem;
 }
-.newsletter .container .newsletter-choices .boxes .check-box {
+.newsletter .container .newsletter-choices .boxes .checkbox-group .check-box {
   display: flex;
   gap: 15px;
 }
-.newsletter .container .newsletter-choices .boxes .check-box p {
+.newsletter .container .newsletter-choices .boxes .checkbox-group .check-box p {
   color: #565973;
   font-weight: 700;
   font-size: 14px;
@@ -377,24 +378,24 @@ header .container .right-side .profile-image img {
 .newsletter .container .subscribe-newsletter .email-subscription button p {
   color: #FFFFFF;
 }
-.newsletter .container .subscribe-newsletter .terms {
+.newsletter .container .subscribe-newsletter .status-message {
   display: flex;
-  justify-content: center;
-  margin-right: 31rem;
+  margin-left: 33rem;
   margin-top: 1rem;
-  color: #9397AD;
+  text-align: center;
+}
+.newsletter .container .subscribe-newsletter .status-message p {
   font-weight: 600;
   font-size: 14px;
   font-family: "Manrope", sans-serif;
 }
-.newsletter .container .subscribe-newsletter .terms span {
-  margin: 0px 4px;
+.newsletter .container .subscribe-newsletter .status-message span {
   color: #6366F1;
   font-weight: 600;
   font-size: 14px;
   font-family: "Manrope", sans-serif;
 }
-.newsletter .container .subscribe-newsletter .terms span:hover {
+.newsletter .container .subscribe-newsletter .status-message span:hover {
   cursor: pointer;
 }
 

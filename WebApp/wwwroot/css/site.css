@@ -701,3 +701,41 @@ header .container .right-side .profile-image img {
   font-weight: 700;
   color: #565973;
 }
+
+.signin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 5rem 0px;
+}
+.signin .container .alert alert-danger {
+  color: red;
+}
+.signin .container h1 {
+  color: #0B0F19;
+  font-weight: 900;
+  font-size: 40px;
+  font-family: "Manrope", sans-serif;
+  margin-bottom: 1rem;
+}
+.signin .container p {
+  font-family: "Manrope", sans-serif;
+  color: #0B0F19;
+  margin-bottom: 1rem;
+}
+.signin .container .form-content .input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.signin .container .form-content .input-group label {
+  margin-bottom: 0.5rem;
+}
+.signin .container .form-content .input-group input {
+  border: solid 1px #D4D7E5;
+  border-radius: 8px;
+  padding: 13px 31rem;
+  color: #B4B7C9;
+  padding-left: 40px;
+}

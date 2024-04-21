@@ -115,6 +115,46 @@ a:hover {
   margin-top: 4.5rem;
 }
 
+footer {
+  margin-top: 2.5rem;
+  background-color: #FFFFFF;
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .container .social-media {
+  display: flex;
+  gap: 10px;
+}
+footer .container .social-media .btn {
+  background-color: #ccc;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #EFF2FC;
+  border-radius: 6px;
+}
+footer .container .social-media .btn:hover {
+  background-color: #999;
+}
+footer .container .social-media .btn-social {
+  font-size: 24px;
+  color: #33354D;
+}
+footer .container .copyright {
+  color: #565973;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: "Manrope", sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 header .container {
   display: flex;
   width: 100%;
@@ -388,12 +428,14 @@ header .container .right-side .profile-image img {
   font-weight: 600;
   font-size: 14px;
   font-family: "Manrope", sans-serif;
+  text-align: center;
 }
 .newsletter .container .subscribe-newsletter .status-message span {
   color: #6366F1;
   font-weight: 600;
   font-size: 14px;
   font-family: "Manrope", sans-serif;
+  text-align: center;
 }
 .newsletter .container .subscribe-newsletter .status-message span:hover {
   cursor: pointer;

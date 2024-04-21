@@ -7,8 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\css\scss\core\" />
-    <Folder Include="wwwroot\css\scss\components\" />
     <Folder Include="wwwroot\images\courses\" />
     <Folder Include="wwwroot\images\icons\" />
     <Folder Include="wwwroot\images\logos\" />

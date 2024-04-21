@@ -115,33 +115,33 @@ a:hover {
   margin-top: 4.5rem;
 }
 
-.container {
+header .container {
   display: flex;
   width: 100%;
   justify-content: space-between;
   overflow: hidden;
 }
-.container .silicon-logo {
+header .container .silicon-logo {
   margin-left: 1rem;
   margin-top: 1rem;
   display: flex;
 }
 @media (min-width: 1575px) {
-  .container .silicon-logo {
+  header .container .silicon-logo {
     display: flex;
     margin-left: 20rem;
     margin-top: 1rem;
   }
 }
 @media (min-width: 1575px) {
-  .container .silicon-logo .nav-bar {
+  header .container .silicon-logo .nav-bar {
     display: block;
     height: 2rem;
     margin-left: 3rem;
     margin-top: 0.7rem;
   }
 }
-.container .silicon-logo .nav-bar a {
+header .container .silicon-logo .nav-bar a {
   display: none;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8549019608);
@@ -150,32 +150,32 @@ a:hover {
   font-weight: 600;
 }
 @media (min-width: 1575px) {
-  .container .silicon-logo .nav-bar a {
+  header .container .silicon-logo .nav-bar a {
     display: inline-block;
   }
 }
-.container .silicon-logo .nav-bar i {
+header .container .silicon-logo .nav-bar i {
   margin-left: 1rem;
   margin-top: 0.6rem;
   font-size: 25px;
 }
 @media (min-width: 1575px) {
-  .container .silicon-logo .nav-bar i {
+  header .container .silicon-logo .nav-bar i {
     display: none;
   }
 }
-.container .right-side {
+header .container .right-side {
   display: flex;
   justify-content: flex-end;
   position: relative;
   padding: 1.1rem 0rem;
 }
 @media (min-width: 1575px) {
-  .container .right-side {
+  header .container .right-side {
     margin-right: 20rem;
   }
 }
-.container .right-side .toggle-box {
+header .container .right-side .toggle-box {
   display: flex;
   background-color: #fff;
   margin: 0.5rem;
@@ -183,17 +183,17 @@ a:hover {
   height: 2rem;
 }
 @media (min-width: 1575px) {
-  .container .right-side .toggle-box {
+  header .container .right-side .toggle-box {
     position: relative;
     margin-right: 4rem;
     gap: 1rem;
   }
 }
-.container .right-side .toggle-box p {
+header .container .right-side .toggle-box p {
   display: none;
 }
 @media (min-width: 1575px) {
-  .container .right-side .toggle-box p {
+  header .container .right-side .toggle-box p {
     display: block;
     margin-top: 2px;
     font-size: 16px;
@@ -201,19 +201,19 @@ a:hover {
     font-weight: 600;
   }
 }
-.container .right-side .toggle-box i {
+header .container .right-side .toggle-box i {
   margin-top: 5px;
 }
 @media (min-width: 1575px) {
-  .container .right-side .toggle-box i {
+  header .container .right-side .toggle-box i {
     display: none;
   }
 }
-.container .right-side .toggle-box #check {
+header .container .right-side .toggle-box #check {
   display: none;
   position: relative;
 }
-.container .right-side .toggle-box .button {
+header .container .right-side .toggle-box .button {
   background-color: rgba(69, 70, 97, 0.8156862745);
   width: 40px;
   height: 20px;
@@ -222,7 +222,7 @@ a:hover {
   cursor: pointer;
   box-shadow: 0 8px 12px rgba(54, 59, 122, 0.199);
 }
-.container .right-side .toggle-box .button::before {
+header .container .right-side .toggle-box .button::before {
   position: absolute;
   content: "";
   background-color: #fff;
@@ -231,66 +231,56 @@ a:hover {
   border-radius: 200px;
   margin: 1px;
 }
-.container .right-side .toggle-box input:checked + .button {
+header .container .right-side .toggle-box input:checked + .button {
   background-color: #20096d;
 }
-.container .right-side .toggle-box input:checked + .button::before {
+header .container .right-side .toggle-box input:checked + .button::before {
   transform: translateX(-20px);
   transform: translateX(20px);
 }
-.container .right-side .personal-account {
-  display: none;
-}
-@media (min-width: 1575px) {
-  .container .right-side .personal-account {
-    display: flex;
-    margin: 0.2rem;
-    gap: 2rem;
-  }
-}
-.container .right-side .personal-account .sign-in-btn {
+header .container .right-side .account-buttons {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+}
+header .container .right-side .account-buttons .sign-in-btn,
+header .container .right-side .account-buttons .sign-up-btn {
+  margin-top: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+header .container .right-side .account-buttons .sign-in-btn i,
+header .container .right-side .account-buttons .sign-up-btn i {
+  margin-right: 5px;
+}
+header .container .right-side .account-buttons .sign-in-btn {
   background-color: #EFF2FC;
-  height: 28px;
-  padding: 17px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
 }
-.container .right-side .personal-account .sign-in-btn i {
-  margin-top: -5px;
-}
-.container .right-side .personal-account .sign-in-btn p {
-  margin-top: -9px;
-  font-size: 14px;
-  font-family: "Manrope", sans-serif;
-  font-weight: 600;
-}
-.container .right-side .personal-account .sign-up-btn {
-  display: flex;
-  gap: 1rem;
+header .container .right-side .account-buttons .sign-up-btn {
   background-color: #6366F1;
-  height: 28px;
-  padding: 17px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
 }
-.container .right-side .personal-account .sign-up-btn i {
-  margin-top: -7px;
-  color: #ffffff;
-}
-.container .right-side .personal-account .sign-up-btn p {
-  margin-top: -9px;
-  font-size: 14px;
-  font-family: "Manrope", sans-serif;
-  font-weight: 600;
-  color: #ffffff;
-}
-.container .right-side .personal-account .sign-in-btn:hover, .container .right-side .personal-account .sign-up-btn:hover {
+header .container .right-side .account-buttons .sign-in-btn:hover,
+header .container .right-side .account-buttons .sign-up-btn:hover {
   transform: scale(1.05);
   transition: transform 0.2s ease-in-out;
+}
+header .container .right-side .profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+header .container .right-side .profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .newsletter {

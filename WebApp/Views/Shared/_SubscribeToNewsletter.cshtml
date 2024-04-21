@@ -57,11 +57,11 @@
                 </div>
                 <button type="submit" class="btn btn-theme">Subscribe *</button>
             </div>
-            @if (!string.IsNullOrEmpty(TempData["StatusMessage"]?.ToString())) 
+            @if (!string.IsNullOrEmpty(TempData["StatusMessage"]?.ToString()))
             {
                 <span class="status-message">@TempData["StatusMessage"]</span>
             }
-            else 
+            else
             {
                 <span class="status-message">* Yes, I agree to the terms and privacy policy.</span>
             }

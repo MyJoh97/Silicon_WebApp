@@ -1,11 +1,17 @@
 ﻿footer {
     margin-top: 2.5rem;
     background-color: #FFFFFF;
+    position: relative;
+    position: absolute;
+    bottom: 0;
+    margin-left: 32rem;
+
 
     .container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
 
         .social-media {
             display: flex;

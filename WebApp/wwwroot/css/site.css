@@ -118,11 +118,16 @@ a:hover {
 footer {
   margin-top: 2.5rem;
   background-color: #FFFFFF;
+  position: relative;
+  position: absolute;
+  bottom: 0;
+  margin-left: 32rem;
 }
 footer .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 footer .container .social-media {
   display: flex;
@@ -738,4 +743,24 @@ header .container .right-side .profile-image img {
   padding: 13px 31rem;
   color: #B4B7C9;
   padding-left: 40px;
+}
+.signin .container .form-content .checkbox-group .input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.signin .container .form-content .checkbox-group .input-group label {
+  margin-top: 8px;
+}
+.signin .container .form-content #form-button button {
+  background-color: #6366F1;
+  border-radius: 8px;
+  padding: 15px 340px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.signin .container .form-content #form-button button:hover {
+  background-color: black;
 }

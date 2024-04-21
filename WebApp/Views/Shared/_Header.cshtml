@@ -31,13 +31,16 @@
             <div class="account-buttons">
                 @if (SignInManager.IsSignedIn(User))
                 {
-                    <div class="profile">
-                        <div class="profile-image">
-                            <a asp-action="Details" asp-controller="Account">
-                                <img src="~/images/uploads/profiles/@user.ProfileImage" />
-                            </a>
+                    if (user != null && !string.IsNullOrEmpty(user.ProfileImage))
+                    {
+                        <div class="profile">
+                            <div class="profile-image">
+                                <a asp-action="Details" asp-controller="Account">
+                                    <img src="~/images/uploads/profiles/@user.ProfileImage" />
+                                </a>
+                            </div>
                         </div>
-                    </div>
+                    }
                 }
                 else
                 {

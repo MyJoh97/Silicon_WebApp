@@ -118,10 +118,6 @@ a:hover {
 footer {
   margin-top: 2.5rem;
   background-color: #FFFFFF;
-  position: relative;
-  position: absolute;
-  bottom: 0;
-  margin-left: 32rem;
 }
 footer .container {
   display: flex;
@@ -212,7 +208,7 @@ header .container .silicon-logo .nav-bar i {
 header .container .right-side {
   display: flex;
   justify-content: flex-end;
-  align-items: center; /* Align items vertically */
+  align-items: center;
   position: relative;
   padding: 1.1rem 0rem;
 }
@@ -762,5 +758,36 @@ header .container .right-side .profile-image img {
   cursor: pointer;
 }
 .signin .container .form-content #form-button button:hover {
+  background-color: black;
+}
+
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0px;
+}
+.signup .container h1 {
+  color: #0B0F19;
+  font-weight: 900;
+  font-size: 40px;
+  font-family: "Manrope", sans-serif;
+  margin-bottom: 1rem;
+  margin-left: 5rem;
+}
+.signup .container p {
+  font-family: "Manrope", sans-serif;
+  color: #0B0F19;
+  margin-bottom: 1rem;
+}
+.signup .container .form-content #form-button button {
+  background-color: #6366F1;
+  border-radius: 8px;
+  padding: 10px 28px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.signup .container .form-content #form-button button:hover {
   background-color: black;
 }

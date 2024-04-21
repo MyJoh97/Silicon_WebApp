@@ -1,6 +1,60 @@
-﻿namespace WebApp.wwwroot.css.scss.sections
-{
-    public class _signup
-    {
+﻿.signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0px;
+
+
+    .container {
+
+        .alert.alert-danger {
+        }
+
+        h1 {
+            color: #0B0F19;
+            font-weight: 900;
+            font-size: 40px;
+            font-family: "Manrope", sans-serif;
+            margin-bottom: 1rem;
+            margin-left: 5rem;
+        }
+
+        p {
+            font-family: "Manrope", sans-serif;
+            color: #0B0F19;
+            margin-bottom: 1rem;
+        }
+
+        .form-content {
+
+            .input-group {
+
+
+                label {
+                }
+
+                input {
+                }
+
+                span {
+                }
+            }
+
+            #form-button button {
+                background-color: #6366F1;
+                border-radius: 8px;
+                padding: 10px 28px;
+                border: none;
+                color: #FFFFFF;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: black;
+                }
+
+                i {
+                }
+            }
+        }
     }
 }

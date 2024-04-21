@@ -167,6 +167,7 @@ header .container .silicon-logo .nav-bar i {
 header .container .right-side {
   display: flex;
   justify-content: flex-end;
+  align-items: center; /* Align items vertically */
   position: relative;
   padding: 1.1rem 0rem;
 }
@@ -240,11 +241,11 @@ header .container .right-side .toggle-box input:checked + .button::before {
 }
 header .container .right-side .account-buttons {
   display: flex;
-  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
 header .container .right-side .account-buttons .sign-in-btn,
 header .container .right-side .account-buttons .sign-up-btn {
-  margin-top: 10px;
   text-decoration: none;
   color: #ffffff;
   padding: 10px 20px;

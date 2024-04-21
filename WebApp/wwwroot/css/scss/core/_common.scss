@@ -1,6 +1,17 @@
-﻿namespace WebApp.wwwroot.css.scss.core
-{
-    public class _common
-    {
-    }
+﻿*, *::before, *::after {
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    font-family: "Manrope", sans-serif;
+    line-height: 1.5;
 }

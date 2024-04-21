@@ -7,10 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\images\courses\" />
     <Folder Include="wwwroot\images\icons\" />
     <Folder Include="wwwroot\images\logos\" />
     <Folder Include="wwwroot\images\uploads\profiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
   </ItemGroup>
 
   <ItemGroup>

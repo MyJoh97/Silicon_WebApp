@@ -1,6 +1,7 @@
-﻿namespace WebApp.wwwroot.css.scss.components
-{
-    public class _links
-    {
+﻿a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
     }
 }

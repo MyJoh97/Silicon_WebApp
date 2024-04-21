@@ -2,6 +2,8 @@
 
     .container {
         display: flex;
+        overflow: hidden;
+        position: relative;
 
         .management-headline {
             padding: 8rem 20rem;
@@ -59,8 +61,10 @@
         }
 
         .task-image {
+            position: absolute;
+            right: 0;
 
-            @media (max-width: 1300px) {
+            @media (max-width: 1900px) {
                 display: none;
             }
         }

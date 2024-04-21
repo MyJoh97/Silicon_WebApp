@@ -443,6 +443,8 @@ header .container .right-side .profile-image img {
 
 .task-management .container {
   display: flex;
+  overflow: hidden;
+  position: relative;
 }
 .task-management .container .management-headline {
   padding: 8rem 20rem;
@@ -491,7 +493,11 @@ header .container .right-side .profile-image img {
 .task-management .container .management-headline .company-logos img {
   margin-right: 2rem;
 }
-@media (max-width: 1300px) {
+.task-management .container .task-image {
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 1900px) {
   .task-management .container .task-image {
     display: none;
   }
